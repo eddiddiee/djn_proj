@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris 붓꽃 분류기</title>
+</head>
+<body>
+    <h1>Iris 붓꽃 분류기</h1>
+    <form method="POST" action="{% url 'iris_app:result' %}">
+        {% csrf_token %}
+        <table>
+            <tr><td><input type="text" name="sl" placeholder="꽃받침 길이(cm)"> </td></tr>
+            <tr><td><input type="text" name="sw" placeholder="꽃받침 폭(cm)"> </td></tr>
+            <tr><td><input type="text" name="pl" placeholder="꽃잎 길이(cm)"> </td></tr>
+            <tr><td><input type="text" name="pw" placeholder="꽃잎 폭(cm)"> </td></tr>
+        </table>
+        <input type="submit" value = "예측">
+    </form>
+</body>
+</html>
+

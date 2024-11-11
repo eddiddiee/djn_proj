@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>predict</title>
+</head>
+<body>
+    <h1>Iris 붓꽃 예측 결과 </h1>
+
+    <table>
+        <tr><td>꽃받침 길이(cm):{{sl}}</td></tr>
+        <tr><td>꽃받침 폭(cm):{{sw}}</td></tr>
+        <tr><td>꽃잎 길이(cm):{{pl}}</td></tr>
+        <tr><td>꽃잎 길이(cm):{{pw}}</td></tr>
+    </table>
+    <h3> 입력값을 바탕으로 예측된 붓꽃의 종류는 아래와 같습니다.
+        <span style='color:red'>{{result}} </span> <h3>
+    <img src="{% static iris_app %}">
+    <a href = "{% url 'iris_app:index' %}"> 메인으로 </a>
+</body>
+</html>
+

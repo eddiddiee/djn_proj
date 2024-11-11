@@ -24,5 +24,5 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Model accuracy: {accuracy * 100:.2f}%")
 
 # 6. 모델 파라미터 저장
-joblib.dump(model, 'svc_model.pkl')
+joblib.dump(model, './svc_model.pkl')
 print("Model parameters saved to 'svc_model.pkl'")
