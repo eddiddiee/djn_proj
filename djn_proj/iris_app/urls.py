@@ -9,7 +9,7 @@ urlpatterns = [
     path("",views.index, name='index'),
     path("test1/", views.modelloadtest, name='test1'),
     path("result/", views.predict, name='result'),
-] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+] 
 
 
 

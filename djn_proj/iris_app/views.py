@@ -38,5 +38,5 @@ def predict(request):
         'result' : result,
         'iris_img': result+'.png'
     }
-    # for commit
+
     return render(request, 'iris_app/result.html', context)
